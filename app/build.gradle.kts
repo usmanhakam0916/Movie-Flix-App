@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.avicenna.enterprise.solutions.movieflix"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.avicenna.enterprise.solutions.movieflix"
