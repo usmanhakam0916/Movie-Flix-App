@@ -21,3 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Movie Flix"
 include(":app")
+include(":core:util")
+include(":core:ui")
+include(":feature:home")
+include(":feature:search")
+include(":feature:watchlist")
+include(":feature:favorite")
