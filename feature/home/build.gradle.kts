@@ -48,6 +48,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.navigation)
+    implementation(libs.coil.compose)
 
 
     testImplementation(libs.junit)
