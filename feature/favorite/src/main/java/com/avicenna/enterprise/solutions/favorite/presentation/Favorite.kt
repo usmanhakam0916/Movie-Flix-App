@@ -1,4 +1,4 @@
-package com.avicenna.enterprise.solutions.favorite.presentation.ui.screen
+package com.avicenna.enterprise.solutions.favorite.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun FavoriteScreen(
+    modifier: Modifier = Modifier,
     onNavigateBack: () -> Unit,
-    modifier: Modifier = Modifier
 ) {
     Column(
         verticalArrangement = Arrangement.Center,

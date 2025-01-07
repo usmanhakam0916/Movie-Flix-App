@@ -1,4 +1,4 @@
-package com.avicenna.enterprise.solutions.home.presentation.ui.screen
+package com.avicenna.enterprise.solutions.home.presentation
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -30,16 +30,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
+import com.avicenna.enterprise.solutions.favorite.presentation.nav.favoriteRoute
 import com.avicenna.enterprise.solutions.home.R
 
-@ExperimentalMaterial3Api
 @Composable
-fun HomeScreen(
-    onNavigateBack: () -> Unit,
-    modifier: Modifier = Modifier
+internal fun HomeScreen(
+    modifier: Modifier = Modifier,
+    navController: NavHostController = rememberNavController()
 ) {
         Box(
             contentAlignment = Alignment.TopStart,
@@ -53,6 +56,9 @@ fun HomeScreen(
                     ))
                 )
         ) {
+            NavHost(navController, startDestination = favoriteRoute) {
+
+            }
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -83,7 +89,9 @@ fun HomeScreen(
                             modifier = Modifier.size(26.dp)
                         )
                     }
-                    IconButton(onClick = {}) {
+                    IconButton(onClick = {
+                        navController.navigate(favoriteRoute)
+                    }) {
                         Icon(
                             painter = painterResource(R.drawable.fav_outline),
                             contentDescription = null,
@@ -133,7 +141,6 @@ fun MovieCard (
     }
 }
 
-@ExperimentalMaterial3Api
 @Preview(showBackground = true, name = "HomePreview", showSystemUi = true)
 @Composable
 fun HomeScreenPreview() {

@@ -1,18 +1,19 @@
-package com.avicenna.enterprise.solutions.favorite.presentation.navigation
+package com.avicenna.enterprise.solutions.favorite.presentation.nav
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.avicenna.enterprise.solutions.favorite.presentation.ui.screen.FavoriteScreen
+import com.avicenna.enterprise.solutions.favorite.presentation.FavoriteScreen
 
+const val favoriteRoute = "favorite"
 
 fun NavGraphBuilder.favoriteScreen(onNavigateBack: () -> Unit) {
-    composable(route = "favorite") {
+    composable(route = favoriteRoute) {
         FavoriteScreen(onNavigateBack = onNavigateBack)
     }
 }
 
 
 fun NavController.navigateToFavorite() {
-    this.navigate(route = "favorite")
+    this.navigate(route = favoriteRoute)
 }
