@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.navigation)
     implementation(project(":feature:favorite"))
     implementation(libs.coil.compose)
+    implementation ("com.google.accompanist:accompanist-pager:0.34.0")
+    implementation ("com.google.accompanist:accompanist-pager-indicators:0.34.0")
 
 
     testImplementation(libs.junit)
